@@ -6,7 +6,7 @@ try {
     session_start();
     if (!isset($_SESSION['USER']) || $_SESSION['USER']['auth_type'] != 1) {
         //ログインされていない場合はログイン画面へ
-        header('Location:/admin/login.php');
+        redirect('./login.php');
         exit;
     }
     $pdo = connect_db();
@@ -17,7 +17,7 @@ try {
     $page_title = '社員リスト';
 } catch (Exception $e) {
     //エラー時の処理
-    header('Location:/error.php');
+    redirect('../error.php');
     exit;
 }
 ?>
@@ -43,7 +43,7 @@ try {
                 <?php foreach ($list as $user) : ?>
                     <tr>
                         <th scope="row"><?= $user['user_id'] ?></th>
-                        <td><a href="/admin/list.php?id=<?= $user['id'] ?>"><?= $user['user_name'] ?></td>
+                        <td><a href="./list.php?id=<?= $user['id'] ?>"><?= $user['user_name'] ?></td>
                         <td scope="row"><?= $user['birthday'] ?></td>
                         <td scope="row"><?php if ($user['auth_type'] == 1) echo '管理者' ?></td>
                     </tr>

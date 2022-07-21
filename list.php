@@ -171,7 +171,7 @@ try {
 
   <h1 class="my-3">月別リスト</h1>
 
-  <form class="border rounded form-time-table" action="list.php">
+  <form class="border rounded form-time-table">
 
     <select class="form-select rounded-pill mb-3 w-auto" name="m" onchange="submit(this.form)">
       <option value="<?= date('Y-m') ?>"><?= date('Y/m') ?></option>

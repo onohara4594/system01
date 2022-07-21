@@ -7,7 +7,7 @@ try {
 
   if (isset($_SESSION['USER']) && $_SESSION['USER']['auth_type'] == 1) {
     //ログイン済みの場合はHOME画面へ
-    header('Location:/admin/user.php');
+    redirect('./user.php');
     exit;
   }
   if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -46,7 +46,7 @@ try {
         $_SESSION['USER'] = $user;
 
         //5.HOME画面へ遷移
-        header('Location:/admin/user.php');
+        redirect('./user.php');
         exit;
       } else {
         $err['password'] = '認証に失敗しました。';
@@ -63,7 +63,7 @@ try {
   $page_title = '日報登録システム';
 } catch (Exception $e) {
   //エラー時の処理
-  header('Location:/error.php');
+  redirect('../error.php');
   exit;
 }
 ?>

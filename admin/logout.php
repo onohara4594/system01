@@ -4,9 +4,9 @@ try {
     $_SESSION = array();
     session_destroy();
 
-    header('Location:/admin/login.php');
+    header('Location:./login.php');
 } catch (Exception $e) {
     //エラー時の処理
-    header('Location:/error.php');
+    header('Location:../error.php');
     exit;
 }

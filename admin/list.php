@@ -1,5 +1,5 @@
 <?php
-require_once(dirname(__FILE__) . '/..config/config.php');
+require_once(dirname(__FILE__) . '/../config/config.php');
 require_once(dirname(__FILE__) . '/../functions.php');
 
 try {
@@ -7,7 +7,7 @@ try {
 
   if (!isset($_SESSION['USER']) || $_SESSION['USER']['auth_type'] != 1) {
     //ログインされていない場合はログイン画面へ
-    header('Location:/admin/login.php');
+    redirect('./login.php');
     exit;
   }
 
@@ -133,7 +133,7 @@ try {
   $page_title = '業務リスト';
 } catch (Exception $e) {
   //エラー時の処理
-  header('Location:/error.php');
+  redirect('../error.php');
   exit;
 }
 ?>
@@ -146,7 +146,7 @@ try {
 
   <h1 class="my-3">月別リスト</h1>
 
-  <form class="border rounded form-time-table" action="list.php">
+  <form class="border rounded form-time-table">
 
     <div class="float-start">
       <select class="form-select rounded-pill my-3 w-auto" name="m" onchange="submit(this.form)">
@@ -160,7 +160,7 @@ try {
     </div>
 
     <div class="float-end">
-      <a href="/admin/user.php"><button type="button" class="btn btn-secondary w-auto my-3 rounded-pill">社員一覧に戻る</button></a>
+      <a href="./user.php"><button type="button" class="btn btn-secondary w-auto my-3 rounded-pill">社員一覧に戻る</button></a>
     </div>
 
     <table class="table table-bordered">
