@@ -1,0 +1,57 @@
+h1{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 50px;
+}
+
+html, body{
+    padding: 40px 0;
+    height: 100%;
+}
+
+.form-login{
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    margin:auto;
+    background: #ffa6a6;
+    border-radius: 20px;
+}
+
+.form-login input{
+    max-width: 300px;
+    margin: auto;
+    height: 50px;
+}
+
+.form-time-table{
+    width: 90%;
+    margin: auto;
+    padding: 15px;
+    background: #ffa6a6;
+    
+}
+
+
+
+.modal-footer{
+    justify-content: center;
+}
+
+.model-header .close{
+    padding:0;
+    margin:0;
+}
+
+.form-user-list{
+    max-width: 600px;
+    margin: auto;
+    padding: 15px;
+    background: #ffa6a6;
+}
+
+.bg-Success {
+    background-color: #FFEFFD !important;
+}
+
+

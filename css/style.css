@@ -1,0 +1,46 @@
+h1{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 50px;
+}
+
+html, body{
+    padding: 40px 0;
+    height: 100%;
+}
+
+.form-login{
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    margin:auto;
+    background: #A6FAFF;
+    border-radius: 20px;
+}
+
+.form-login input{
+    max-width: 300px;
+    margin: auto;
+    height: 50px;
+}
+
+.form-time-table{
+    width: 90%;
+    margin: auto;
+    padding: 15px;
+    background-color: #A6FAFF;
+}
+
+.form-time-table select{
+    max-width: 200px;
+    height: 50px;
+}
+
+.modal-footer{
+    justify-content: center;
+}
+
+.model-header .close{
+    padding:0;
+    margin:0;
+}
