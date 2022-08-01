@@ -224,7 +224,7 @@ try {
             <td><?= $rest_time ?></td>
             <td><?= h($comment) ?></td>
             <td class="d-none"><?= h($comment_long) ?></td>
-            <td><button type="button" class="btn btn-default h-auto py-0" 
+            <td><button type="button" class="btn btn-default h-auto p-0" 
             data-bs-toggle="modal" data-bs-target="#inputModal" 
             data-day="<?= $yyyymm . '-' . sprintf('%02d', $i) ?>" 
             data-month="<?= date('n', strtotime($yyyymm . '-' . $i)) ?>">

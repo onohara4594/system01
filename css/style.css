@@ -25,6 +25,7 @@ html, body{
 }
 
 .form-time-table{
+    min-width: 430px;
     width: 90%;
     margin: auto;
     padding: 15px;
