@@ -1,8 +1,8 @@
 <?php
 //データベースに接続する
 function connect_db(){
-    $param = 'mysql:dbname=bh207_system;host=mysql11.onamae.ne.jp;';
-    $pdo = new PDO($param,"bh207_user","user0882@");
+    $param = 'mysql:dbname=;host=;';
+    $pdo = new PDO($param,"","");
     $pdo->query('SET NAMES utf8;');
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
     return $pdo;
